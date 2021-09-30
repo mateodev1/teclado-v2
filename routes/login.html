@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./../css/index.css">
+    <meta name="description" content="Inicio de session y registrarse">
+    <meta name="keywords" content="Teclados Mecanicos keyboard mechanical login">
+    <title>Login</title>
+</head>
+<body>
+    <header><!-- Inicio header -->
+        <nav >
+            <ul class="header__navegacion">
+                <li><a href="./teclados.html">Teclados</a></li>
+                <li><a href="./guia.html">Guia</a></li>
+                <li class="logo"><picture><a href="./../index.html"><img src="./../img/favicon.ico" alt=""></a></picture></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="./login.html">Iniciar sesion</a></li>
+            </ul>
+        </nav>
+    </header><!-- Fin header -->
+    <main id="mainLogin"><!-- Inicio main -->
+        <section  class="bg box"> <!-- Inicio login -->
+            <h1>Iniciar sesion</h1>
+            <form action="post">
+                <label for="usuario">Usuario o Email: </label><br>
+                <input type="text" name="usuario" id=""><br>
+                <label for="password">Contraseña: </label><br>
+                <input type="password" name="password" id=""><br>
+                <input type="button" value="Entrar">
+            </form>
+        </section><!-- Fin login -->
+        <section  class="bg box"><!-- Inicio registrar -->
+            <h1>Registrarse</h1>
+            <form action="post">
+                <label for="usuario">Nombre completo: </label><br>
+                <input type="text" name="usuario" id=""><br>
+                <label for="email">Email: </label><br>
+                <input type="email" name="email" id=""><br>
+                <label for="sexo">Sexo: </label><br>
+                <select name="sexo" id="">
+                    <option value="Hombre">Hombre</option>
+                    <option value="Mujer">Mujer</option>
+                    <option value="x">x</option>
+                </select><br>
+                <label for="edad">Edad: </label><br>
+                <input type="number"><br>
+                <label for="password">Contraseña: </label><br>
+                <input type="password" name="password" id=""><br>
+                <label for="password">Contraseña nuevamente: </label><br>
+                <input type="password" name="password" id=""><br><br>
+                <input type="checkbox" name="info">
+                <label for="info">Acepta recibir informacion y promociones en su Email</label><br><br>
+                <input type="checkbox" name="acepta">
+                <label for="acepta">Acepta <a href="">Terminos y condiciones</a></label><br><br>
+                <input type="reset" value="Resetar formulario"><br><br>
+                <input type="button" value="Enviar">
+            </form>
+        </section><!-- Fin registrar -->
+    </main><!-- Fin main -->
+    <footer>
+        <section class="footer__seguinos">
+            <h2>Seguinos</h2>
+            <form action="post">
+                <label id="label" for="mail">Enterate de las ultimas novedades</label>
+                <input class="bg email" type="email" name="mail" id="" placeholder="Ingesa tu email">
+                <input class="bg" id="boton" type="button" value="suscribirse">
+            </form>
+        </section>
+        <section class="footer__contacto">
+            <h2>Contacto</h2>
+            <form action="post">
+                <input class="bg" type="text" name="nombre" id="nombre" placeholder="Nombre">
+                <input class="bg email" type="email" name="email" placeholder="Email">   
+                <textarea class="bg" name="comentario" id="texto"  placeholder="Comentario"></textarea>
+                <input class="bg" type="button" value="Enviar" id="enviar">
+            </form>
+        </section>
+    </footer>
+</body>
+</html>
