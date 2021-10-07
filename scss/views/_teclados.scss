@@ -1,0 +1,40 @@
+#mainTeclados{
+    min-height:  90%;
+    height: max-content;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    section{
+        margin: 2rem;
+        max-width: 100%;
+        display: grid;
+        grid-template: repeat(2,1fr)/repeat(3,1fr);
+        gap:1rem;
+        grid-template-areas: 'a b c' 'd e f';
+    }
+}
+.articulo{
+    border:5px bold black ;
+    h2 {
+        margin: 1rem auto;
+        max-width:max-content;
+        border-radius: 5px;
+        padding: 0.7rem;
+        font-size: 2rem;
+    }
+    img{
+        max-width: 80%;
+        border:1px bold black ;
+    }
+    div{font-size: 1.6rem;}
+}
+@media only screen and (max-width:768px){
+    #mainTeclados{
+        section{
+            display: flex;
+            flex-direction: column;
+
+        }
+    }
+}

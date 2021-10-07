@@ -1,0 +1,54 @@
+#mainNosotros{
+    min-height:  90%;
+    height: max-content;
+    margin: 1rem;
+    display: flex;
+    justify-content: space-around;
+    section{
+        padding: 1.5rem;
+        max-width: 40%;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+}
+
+.mainNosotros__preguntas{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+}
+.mainNosotros__nosotros{
+    display: grid;
+    grid-template-rows: 80% 20%;
+}
+
+.mainNosotros__nosotros__redes{
+    nav {
+    height: 80%;
+        ul{
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 3rem;
+            li a {color: white;}
+        }
+    }
+}   
+@media only screen and (max-width:768px){
+    #mainNosotros{
+        flex-direction: column;
+        section{
+            max-width: 100%;
+            margin:1rem 0; 
+        }
+    }
+    .mainNosotros__nosotros{
+        display: block;
+    }
+    .mainNosotros__preguntas{
+        >article{
+            margin: 0.5rem;
+        }
+    }
+}
