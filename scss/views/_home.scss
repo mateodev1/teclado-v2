@@ -48,6 +48,7 @@
 }
 @media only screen and (max-width:768px){
     .mainIndex {
+        min-height: 64%;
         height: max-content;
         padding:  0.5rem 0;
         section{
@@ -66,5 +67,4 @@
             margin: auto;
         }
     }
-
 }

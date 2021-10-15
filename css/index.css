@@ -50,49 +50,51 @@ li, ul {
     font-size: 50%; } }
 
 header {
-  width: 100%;
-  height: 10vh; }
-  header nav {
-    width: 100%;
-    height: 100%; }
-
-.header__navegacion {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .header__navegacion > li {
-    width: 200px;
+  height: max-content; }
+  header > nav {
+    margin-top: 1rem;
+    height: 100%;
     display: flex;
-    justify-content: center; }
-    .header__navegacion > li > a {
-      border-radius: 5px;
-      padding: 0.7rem;
-      font-size: 1.4rem;
-      color: white;
-      background-color: black; }
-    .header__navegacion > li a:hover {
-      font-size: 1.7rem;
-      padding: 1rem;
-      background-color: rgba(0, 0, 0, 0.5); }
-    .header__navegacion > li picture {
-      display: flex;
-      justify-content: center;
-      width: 200px; }
-      .header__navegacion > li picture a {
-        border-radius: 5px;
-        padding: 0.7rem;
-        background-color: black; }
-
-@media only screen and (max-width: 768px) {
-  .header__navegacion {
     flex-direction: column;
-    height: max-content;
-    margin: 1rem; }
-    .header__navegacion li {
-      padding: 0.5rem; }
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; }
+
+.menu {
+  position: relative;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem; }
+  .menu li {
+    display: flex;
+    justify-content: center;
+    width: 120px; }
+
+.btnMenu:hover ~ .menu {
+  display: flex; }
+
+.btnNav {
+  border-radius: 5px;
+  padding: 0.7rem;
+  font-size: 1.4rem;
+  color: white;
+  background-color: black; }
+
+@media only screen and (min-width: 768px) {
   header {
-    height: max-content; } }
+    height: 10vh; }
+    header nav {
+      margin-top: 0; }
+  .menu {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; }
+  .btnMenu {
+    display: none; } }
 
 footer {
   background-color: rgba(0, 0, 0, 0.35);
@@ -109,7 +111,7 @@ footer {
   width: 90%;
   display: grid;
   grid-template-columns: auto auto;
-  grid-template-areas: "label label" "email boton";
+  grid-template-areas: "label label" "email boton";
   gap: 1rem; }
 
 #label {
@@ -125,7 +127,7 @@ footer {
   display: grid;
   grid-template-columns: 30% auto;
   grid-template-rows: repeat(3, 3fr);
-  grid-template-areas: "nombre texto" "email texto" "enviar texto";
+  grid-template-areas: "nombre texto" "email texto" "enviar texto";
   gap: 1rem; }
 
 #nombre {
@@ -196,6 +198,7 @@ footer {
 
 @media only screen and (max-width: 768px) {
   .mainIndex {
+    min-height: 64%;
     height: max-content;
     padding: 0.5rem 0; }
     .mainIndex section {
@@ -379,6 +382,13 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center; }
+  #mainLogin > section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; }
+    #mainLogin > section form input {
+      width: max-content; }
 
 @media only screen and (max-width: 768px) {
   #mainLogin {
