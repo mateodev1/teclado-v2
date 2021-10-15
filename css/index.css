@@ -109,7 +109,7 @@ footer {
   width: 90%;
   display: grid;
   grid-template-columns: auto auto;
-  grid-template-areas: "label label" "email boton";
+  grid-template-areas: "label label" "email boton";
   gap: 1rem; }
 
 #label {
@@ -125,7 +125,7 @@ footer {
   display: grid;
   grid-template-columns: 30% auto;
   grid-template-rows: repeat(3, 3fr);
-  grid-template-areas: "nombre texto" "email texto" "enviar texto";
+  grid-template-areas: "nombre texto" "email texto" "enviar texto";
   gap: 1rem; }
 
 #nombre {
