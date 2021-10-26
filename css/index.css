@@ -62,7 +62,7 @@ header {
 
 .menu {
   position: relative;
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem; }
@@ -71,8 +71,8 @@ header {
     justify-content: center;
     width: 120px; }
 
-.btnMenu:hover ~ .menu {
-  display: flex; }
+.btnMenu {
+  display: none; }
 
 .btnNav {
   border-radius: 5px;
@@ -86,6 +86,8 @@ header {
     height: 10vh; }
     header nav {
       margin-top: 0; }
+      header nav a {
+        position: absolute; }
   .menu {
     width: 100%;
     position: absolute;
@@ -304,25 +306,43 @@ footer {
     justify-content: center;
     align-items: center;
     height: 10%; }
-  .destacadosUl ul {
-    box-sizing: border-box;
-    height: 90%;
-    display: grid;
-    grid-template-columns: 80%;
-    grid-template-rows: repeat(5, 18.5%);
-    gap: 1rem;
-    justify-content: center; }
-    .destacadosUl ul li {
-      height: 100%;
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: start;
-      align-items: center; }
-      .destacadosUl ul li h3 {
-        font-size: 2rem;
-        margin-left: 1rem; }
-      .destacadosUl ul li img {
-        height: 100%; }
+
+.switch {
+  box-sizing: border-box;
+  height: 90%;
+  display: grid;
+  grid-template-columns: 80%;
+  grid-template-rows: repeat(5, 18.5%);
+  gap: 1rem;
+  justify-content: center; }
+  .switch li {
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items: center; }
+    .switch li h3 {
+      font-size: 2rem;
+      margin-left: 1rem; }
+    .switch li img {
+      height: 100%; }
+
+.case {
+  height: 90%; }
+  .case li {
+    margin: 1rem;
+    height: 50%; }
+    .case li img {
+      height: 100%; }
+
+.keycaps {
+  height: 90%; }
+  .keycaps li {
+    margin: 1rem;
+    height: 30%; }
+    .keycaps li img {
+      width: 100%;
+      height: 100%; }
 
 @media only screen and (max-width: 768px) {
   #mainGuia {
@@ -363,8 +383,10 @@ footer {
   .descripcion {
     height: max-content;
     width: 100%;
-    grid-template: 20% max-content 30rem /100%;
-    grid-template-areas: "img" "text" "ul"; }
+    display: flex;
+    flex-direction: column; }
+    .descripcion img {
+      max-height: 20rem; }
   .destacadosUl {
     height: 100%; }
     .destacadosUl ul {
@@ -444,8 +466,11 @@ footer {
   height: max-content;
   width: 100vw;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center; }
+  #mainTeclados h1 {
+    font-size: 2rem; }
   #mainTeclados section {
     margin: 2rem;
     max-width: 100%;
